@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CropGuard AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌾 CropGuard AI – Disease Detection</h1>
+
+        <input type="text" id="imagePath" placeholder="Enter image path (e.g. sample.jpg)" />
+
+        <input type="text" id="crop" placeholder="Crop Name (e.g. Tomato)" />
+        <input type="text" id="location" placeholder="Location (e.g. Maharashtra)" />
+        <input type="text" id="stage" placeholder="Growth Stage (e.g. Vegetative)" />
+
+        <button onclick="analyzeCrop()">Analyze Crop</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

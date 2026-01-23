@@ -1,6 +1,6 @@
 def generate_alert(severity):
     if severity == "High":
-        return "High priority alert: Immediate action required."
+        return "High priority alert."
     if severity == "Medium":
-        return "Medium priority alert: Monitor closely."
+        return "Medium priority alert."
     return "Low priority alert."

@@ -1,76 +1,149 @@
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.container {
-    background: #ffffff;
-    padding: 25px 30px;
-    border-radius: 14px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    width: 360px;
-    transition: transform 0.3s ease;
+body {
+    background: #eef5ee;
 }
 
-.container:hover {
-    transform: translateY(-3px);
+/* Layout */
+.app {
+    display: flex;
+    min-height: 100vh;
 }
 
-h1 {
+/* Sidebar */
+.sidebar {
+    width: 90px;
+    background: #1b5e20;
+    color: white;
     text-align: center;
-    color: #2e7d32;
-    margin-bottom: 15px;
-    letter-spacing: 0.5px;
+    padding: 20px 10px;
 }
 
+.sidebar h2 {
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.sidebar nav span {
+    display: block;
+    font-size: 22px;
+    margin: 25px 0;
+    cursor: pointer;
+}
+
+/* Dashboard */
+.dashboard {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ), url("assets/agriculture-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    margin-bottom: 20px;
+}
+
+/* Inputs */
 input {
     width: 100%;
     padding: 10px;
-    margin: 8px 0;
-    border-radius: 8px;
-    border: 1px solid #c8e6c9;
-    font-size: 14px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    margin: 6px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
 }
 
-input:focus {
-    outline: none;
-    border-color: #2e7d32;
-    box-shadow: 0 0 6px rgba(46, 125, 50, 0.3);
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
 }
 
+/* Button */
 button {
     width: 100%;
     padding: 12px;
     margin-top: 10px;
-    background: linear-gradient(135deg, #2e7d32, #43a047);
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
-button:hover {
-    background: linear-gradient(135deg, #1b5e20, #2e7d32);
-    box-shadow: 0 6px 15px rgba(46, 125, 50, 0.3);
+/* Result Card */
+.result-card {
+    background: #f9fff9;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
 }
 
-button:active {
-    transform: scale(0.97);
+/* Severity Badge */
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 
-#result {
-    margin-top: 15px;
-    font-size: 14px;
-    text-align: center;
-    color: #333;
+.low { background: #4caf50; }
+.medium { background: #ff9800; }
+.high { background: #f44336; }
+
+/* Progress */
+.progress {
+    background: #ddd;
+    height: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 8px 0 12px;
 }
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #66bb6a, #2e7d32);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 

@@ -10,7 +10,6 @@
 
 <div class="app">
 
-    <!-- Sidebar -->
     <aside class="sidebar">
         <h2>Crop<br>Guard<br>AI</h2>
         <nav>
@@ -20,17 +19,16 @@
         </nav>
     </aside>
 
-    <!-- Main Dashboard -->
     <main class="dashboard">
 
-        <!-- Hero -->
         <section class="hero">
             <h1>AI Crop Disease Detection</h1>
-            <p>Upload a leaf image to detect crop disease</p>
+            <p class="subtitle">
+                Smart AI-based Crop Disease Detection & Advisory System
+            </p>
         </section>
 
-        <!-- Input Card -->
-        <section class="card input-card">
+        <section class="card">
             <input type="file" id="imageFile" accept="image/*">
 
             <div class="grid">
@@ -42,7 +40,6 @@
             <button onclick="analyzeCrop()">Analyze Crop</button>
         </section>
 
-        <!-- Output -->
         <section id="result"></section>
 
     </main>

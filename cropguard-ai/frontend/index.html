@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CropGuard AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <h2>Crop<br>Guard<br>AI</h2>
+        <nav>
+            <span>🏠</span>
+            <span>📊</span>
+            <span>🔔</span>
+        </nav>
+    </aside>
+
+    <main class="dashboard">
+
+        <section class="hero">
+            <h1>AI Crop Disease Detection</h1>
+            <p class="subtitle">
+                Smart AI-based Crop Disease Detection & Advisory System
+            </p>
+        </section>
+
+        <section class="card">
+            <input type="file" id="imageFile" accept="image/*">
+
+            <div class="grid">
+                <input type="text" id="crop" placeholder="Crop Name">
+                <input type="text" id="location" placeholder="Location">
+                <input type="text" id="stage" placeholder="Growth Stage">
+            </div>
+
+            <button onclick="analyzeCrop()">Analyze Crop</button>
+        </section>
+
+        <section id="result"></section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

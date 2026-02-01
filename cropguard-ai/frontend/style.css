@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #eef5ee;
+}
+
+/* Layout */
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 90px;
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.sidebar h2 {
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.sidebar nav span {
+    display: block;
+    font-size: 22px;
+    margin: 25px 0;
+    cursor: pointer;
+}
+
+/* Dashboard */
+.dashboard {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ), url("assets/agriculture-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Result Card */
+.result-card {
+    background: #f9fff9;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* Severity Badge */
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.low { background: #4caf50; }
+.medium { background: #ff9800; }
+.high { background: #f44336; }
+
+/* Progress */
+.progress {
+    background: #ddd;
+    height: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 8px 0 12px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #66bb6a, #2e7d32);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
